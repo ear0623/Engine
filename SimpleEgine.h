@@ -31,9 +31,9 @@ public:
 			Instance = new SimpleEgine();
 		}
 		return Instance; 
-	}//싱글턴패턴
+	}//싱글턴패턴 엔진처럼 하려면 
 
-	
+	static int KeyCode;
 
 protected:
 
@@ -42,9 +42,10 @@ protected:
 	bool IsRunning;
 
 	int Input();
-	void Tick(int KeyCode);
+	void Tick();
 	void Render();
 
+	
 	static SimpleEgine* Instance;
 
 private:

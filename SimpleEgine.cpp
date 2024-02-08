@@ -9,6 +9,7 @@
 
 
 SimpleEgine* SimpleEgine::Instance = nullptr;
+int SimpleEgine::KeyCode = 0;
 
 SimpleEgine::SimpleEgine()
 {
@@ -30,9 +31,9 @@ void SimpleEgine::Run()
 {
 	while (IsRunning)
 	{
-		int KeyCode = Input();
+		Input();
 		//collision
-		Tick(KeyCode);
+		Tick();
 		system("cls");
 		Render();
 	}
@@ -109,9 +110,9 @@ int SimpleEgine::Input()
 	return KeyCode;
 }
 
-void SimpleEgine::Tick(int KeyCode)
+void SimpleEgine::Tick()
 {
-	GetWorld()->Tick(KeyCode);
+	GetWorld()->Tick();
 }
 
 void SimpleEgine::Render()

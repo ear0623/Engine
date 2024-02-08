@@ -12,7 +12,7 @@ public:
 
 
 	void SpawnActor(AActor* NewActor);
-	void Tick(int KeyCode);
+	void Tick();
 	void Render();
 
 	void SortRenderOrder();

@@ -23,10 +23,11 @@ APlayer::~APlayer()
 
 }
 
-void APlayer::Tick(int KeyCode)
+void APlayer::Tick()
 {
 	//AActor::Tick(KeyCode);//정규 문법
-	__super::Tick(KeyCode);//같은 기능 . ms전용
+	__super::Tick();//같은 기능 . ms전용
+	int KeyCode = SimpleEgine::KeyCode;
 	//
 	if (KeyCode == 'A' || KeyCode == 'a')
 	{
@@ -59,6 +60,11 @@ void APlayer::Tick(int KeyCode)
 			Y--;
 		}
 		
+	}
+	if (KeyCode == 27)
+	{
+		GENGINE->Stop();
+
 	}
 	else
 	{

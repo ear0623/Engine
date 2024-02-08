@@ -6,6 +6,7 @@ AMonster::AMonster()
 	X = 10;
 	Y = 10;
 	SortOrder = 400;
+	bCollide = false;
 }
 
 AMonster::AMonster(int NewX, int NewY, char NewShape,int NewSortOrder)

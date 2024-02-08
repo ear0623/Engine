@@ -10,7 +10,7 @@ public:
 	~AActor();
 
 	virtual void BeginPlay();
-	virtual void Tick(int KeyCode);
+	virtual void Tick();
 	virtual void Render();//=0 순수가상함수-> 메인함수에서 인터페이스 강제/
 
 	//accessor

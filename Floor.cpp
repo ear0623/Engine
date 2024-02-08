@@ -21,3 +21,4 @@ AFloor::AFloor(int NewY, int NewX, char NewShape, int NewSortOrder)
 AFloor::~AFloor()
 {
 }
+
